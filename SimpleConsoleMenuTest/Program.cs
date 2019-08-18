@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YonatanMankovich.SimpleConsoleMenu.Test
+namespace YonatanMankovich.SimpleConsoleMenus.Test
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace YonatanMankovich.SimpleConsoleMenu.Test
 
         private static void TestSimpleConsoleMenu()
         {
-            SimpleConsoleMenu menu = new SimpleConsoleMenu("Choose an option:");
+            SimpleConsoleMenu menu = new SimpleConsoleMenus("Choose an option:");
             menu.AddOption("Option 1");
             menu.AddOption("Option 2");
             menu.AddOption("Option 3");

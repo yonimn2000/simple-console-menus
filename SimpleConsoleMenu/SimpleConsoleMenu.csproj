@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>YonatanMankovich.SimpleConsoleMenu</RootNamespace>
-    <AssemblyName>YonatanMankovich.SimpleConsoleMenu</AssemblyName>
+    <RootNamespace>YonatanMankovich.SimpleConsoleMenus</RootNamespace>
+    <AssemblyName>YonatanMankovich.SimpleConsoleMenus</AssemblyName>
     <Copyright></Copyright>
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType></RepositoryType>
-    <Product>SimpleConsoleMenu</Product>
+    <Product>SimpleConsoleMenus</Product>
     <Company></Company>
     <Authors>Yonatan Mankovich</Authors>
+    <PackageId>YonatanMankovich.SimpleConsoleMenus</PackageId>
   </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YonatanMankovich.SimpleConsoleMenu
+namespace YonatanMankovich.SimpleConsoleMenus
 {
     public class SimpleConsoleMenu : ConsoleMenu
     {

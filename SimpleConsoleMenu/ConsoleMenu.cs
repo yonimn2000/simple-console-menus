@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace YonatanMankovich.SimpleConsoleMenu
+namespace YonatanMankovich.SimpleConsoleMenus
 {
     public abstract class ConsoleMenu
     {

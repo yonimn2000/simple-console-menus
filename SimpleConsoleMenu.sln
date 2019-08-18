@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleMenu", "SimpleConsoleMenu\SimpleConsoleMenu.csproj", "{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleMenuTest", "SimpleConsoleMenuTest\SimpleConsoleMenuTest.csproj", "{4AE19540-BE04-4E06-A916-96F509CC7C77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE19540-BE04-4E06-A916-96F509CC7C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE19540-BE04-4E06-A916-96F509CC7C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE19540-BE04-4E06-A916-96F509CC7C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE19540-BE04-4E06-A916-96F509CC7C77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {965123AC-2438-4371-BDA3-D16779CE81E5}
+	EndGlobalSection
+EndGlobal

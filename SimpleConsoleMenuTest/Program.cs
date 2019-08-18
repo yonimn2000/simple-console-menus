@@ -13,7 +13,7 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
 
         private static void TestSimpleConsoleMenu()
         {
-            SimpleConsoleMenu menu = new SimpleConsoleMenus("Choose an option:");
+            SimpleConsoleMenu menu = new SimpleConsoleMenu("Choose an option:");
             menu.AddOption("Option 1");
             menu.AddOption("Option 2");
             menu.AddOption("Option 3");

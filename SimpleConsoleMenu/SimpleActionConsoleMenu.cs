@@ -11,6 +11,8 @@ namespace YonatanMankovich.SimpleConsoleMenus
             actions = new List<Action>();
         }
 
+        public SimpleActionConsoleMenu() : this(null) { }
+
         public void AddOption(string optionName, Action action)
         {
             menuItems.Add(optionName);

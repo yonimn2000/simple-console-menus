@@ -21,7 +21,8 @@ namespace YonatanMankovich.SimpleConsoleMenus
         {
             if (linesToSkipFromTop < 0)
                 linesToSkipFromTop = Console.CursorTop;
-            Console.WriteLine(Title);
+            if(!string.IsNullOrWhiteSpace(Title))
+                Console.WriteLine(Title);
             // Loop until user selection confirmation.
             do
             {

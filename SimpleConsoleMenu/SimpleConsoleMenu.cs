@@ -1,15 +1,11 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace YonatanMankovich.SimpleConsoleMenus
 {
     public class SimpleConsoleMenu : ConsoleMenu
     {
-        public SimpleConsoleMenu(string title) : base(title)
-        {
-            Title = title;
-            menuItems = new List<string>();
-            SelectedIndex = 0;
-        }
+        public SimpleConsoleMenu(string title) : base(title) { }
+
+        public SimpleConsoleMenu() : this(null) { }
 
         public void AddOption(string optionName)
         {

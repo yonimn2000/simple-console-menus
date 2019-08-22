@@ -8,6 +8,7 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
         {
             TestSimpleConsoleMenu();
             TestSimpleActionConsoleMenu();
+            TestSimpleConsoleMenuNoTitle();
             Console.ReadLine();
         }
 
@@ -28,6 +29,16 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
             menu.AddOption("Show another menu", TestSimpleConsoleMenu);
             menu.AddOption("Exit", () => Environment.Exit(0));
             menu.ShowAndDoAction();
+        }
+
+        private static void TestSimpleConsoleMenuNoTitle()
+        {
+            SimpleConsoleMenu menu = new SimpleConsoleMenu();
+            menu.AddOption("Option 1");
+            menu.AddOption("Option 2");
+            menu.AddOption("Option 3");
+            menu.Show();
+            Console.WriteLine($"You selected index {menu.SelectedIndex} which is '{menu.GetSelectedItemName()}'");
         }
     }
 }

@@ -68,18 +68,6 @@ namespace YonatanMankovich.SimpleConsoleMenus
             return false;
         }
 
-        public int ShowAndGetSelectedIndex()
-        {
-            Show();
-            return SelectedIndex;
-        }
-
-        public string ShowAndGetSelectedItemName()
-        {
-            Show();
-            return GetSelectedItemName();
-        }
-
         public void WriteInNegativeColor(string text)
         {
             ConsoleColor tempColor = Console.BackgroundColor;

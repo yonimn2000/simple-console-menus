@@ -4,13 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>YonatanMankovich.SimpleConsoleMenus</RootNamespace>
     <AssemblyName>YonatanMankovich.SimpleConsoleMenus</AssemblyName>
-    <Copyright></Copyright>
+    <Copyright>© 2019 Yonatan Mankovich</Copyright>
     <RepositoryUrl></RepositoryUrl>
     <RepositoryType></RepositoryType>
-    <Product>SimpleConsoleMenus</Product>
+    <Product>YonatanMankovich.SimpleConsoleMenus</Product>
     <Company></Company>
     <Authors>Yonatan Mankovich</Authors>
     <PackageId>YonatanMankovich.SimpleConsoleMenus</PackageId>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+    <Version>1.0</Version>
   </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-# Simple Console Menu
+# Simple Console Menus
 
-Use up and down arrow keys to navigate and ENTER key to select.
+Use the up and down arrow keys to navigate and the ENTER key to select.
 
 ## Simple Console Menu Example
 

@@ -57,10 +57,14 @@ namespace YonatanMankovich.SimpleConsoleMenus
                     case ConsoleKey.DownArrow:
                         if (SelectedIndex < menuItems.Count - 1)
                             SelectedIndex++;
+                        else
+                            SelectedIndex = 0;
                         break;
                     case ConsoleKey.UpArrow:
                         if (SelectedIndex > 0)
                             SelectedIndex--;
+                        else
+                            SelectedIndex = menuItems.Count - 1;
                         break;
                     default: correctKey = false; break;
                 }

@@ -7,12 +7,14 @@ Use the up and down arrow keys to navigate and the ENTER key to select.
 ### Adding Menu Options
 
 #### Manually
+
 ```cs
 SimpleConsoleMenu menu = new SimpleConsoleMenu("Choose an option:");
 menu.AddOption("Option 1");
 menu.AddOption("Option 2");
 menu.AddOption("Option 3");
 ```
+
 #### Using `params`
 
 ```cs
@@ -35,9 +37,10 @@ string selectedItemName = menu.GetSelectedItemName();
 Console.WriteLine($"You selected index {selectedIndex} which is '{selectedItemName}'");
 ```
 
-![](media/SimpleExampleScreenshot.png)
+![Simple Menu](media/SimpleExample.gif)
 
 ---
+
 ## Simple *Action* Console Menu Example
 
 ```cs
@@ -48,4 +51,4 @@ menu.AddOption("Exit", () => Environment.Exit(0));
 menu.ShowAndDoAction();
 ```
 
-![](media/ActionExampleScreenshot.png)
+![Action Menu](media/ActionExample.gif)

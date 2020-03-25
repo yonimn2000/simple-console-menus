@@ -18,20 +18,20 @@ namespace YonatanMankovich.SimpleConsoleMenus
 
         public SimpleConsoleMenu() : this(null) { }
 
-        public void AddOption(string optionName)
+        public void AddOption(string optionText)
         {
-            menuItems.Add(optionName);
+            menuItems.Add(optionText);
         }
 
-        public void AddOptionsRange(IEnumerable<string> options)
+        public void AddOptionsRange(IEnumerable<string> optionTexts)
         {
-            foreach (string option in options)
-                AddOption(option);
+            foreach (string optionText in optionTexts)
+                AddOption(optionText);
         }
 
-        public void RemoveOption(string optionName)
+        public void RemoveOption(string optionText)
         {
-            menuItems.Remove(optionName);
+            menuItems.Remove(optionText);
         }
 
         public void RemoveOptionAt(int index)

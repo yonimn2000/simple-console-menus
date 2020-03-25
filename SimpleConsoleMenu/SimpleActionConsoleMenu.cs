@@ -13,15 +13,15 @@ namespace YonatanMankovich.SimpleConsoleMenus
 
         public SimpleActionConsoleMenu() : this(null) { }
 
-        public void AddOption(string optionName, Action action)
+        public void AddOption(string optionText, Action action)
         {
-            menuItems.Add(optionName);
+            menuItems.Add(optionText);
             actions.Add(action);
         }
 
-        public void RemoveOption(string optionName)
+        public void RemoveOption(string optionText)
         {
-            RemoveOptionAt(menuItems.IndexOf(optionName));
+            RemoveOptionAt(menuItems.IndexOf(optionText));
         }
 
         public void RemoveOptionAt(int index)

@@ -19,6 +19,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
 
         public void Show()
         {
+            Console.CursorVisible = false;
             if (linesToSkipFromTop < 0)
                 linesToSkipFromTop = Console.CursorTop;
             if (!string.IsNullOrWhiteSpace(Title))
@@ -40,6 +41,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
                         Console.WriteLine(text);
                 }
             } while (!WasEnterPressed());
+            Console.CursorVisible = true;
         }
 
         private bool WasEnterPressed()

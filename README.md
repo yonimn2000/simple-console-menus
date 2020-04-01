@@ -52,3 +52,13 @@ menu.ShowAndDoAction();
 ```
 
 ![Action Menu](media/ActionExample.gif)
+
+## My Other Projects That Use This Library
+
+[Command Line Synonyms Practice Tool](https://github.com/yonimn2000/command-line-synonyms-practice-tool)
+
+[Command Line Battleship Game](https://github.com/yonimn2000/command-line-battleship-v2)
+
+[Command Line Snake](https://github.com/yonimn2000/command-line-snake)
+
+[System Specs Scraper](https://github.com/yonimn2000/system-specs-scraper)

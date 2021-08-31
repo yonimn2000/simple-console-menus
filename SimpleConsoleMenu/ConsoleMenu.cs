@@ -8,7 +8,6 @@ namespace YonatanMankovich.SimpleConsoleMenus
         public string Title { get; set; }
         public int SelectedIndex { get; set; }
         internal IList<string> menuItems;
-        internal int linesToSkipFromTop = -1;
 
         public ConsoleMenu(string title)
         {
@@ -20,14 +19,14 @@ namespace YonatanMankovich.SimpleConsoleMenus
         public void Show()
         {
             Console.CursorVisible = false;
-            if (linesToSkipFromTop < 0)
-                linesToSkipFromTop = Console.CursorTop;
+            int linesToSkipFromTop = Console.CursorTop;
+
             if (!string.IsNullOrWhiteSpace(Title))
                 Console.WriteLine(Title);
             else
                 linesToSkipFromTop--;
-            // Loop until user selection confirmation.
-            do
+
+            do // Loop until user confirms selection.
             {
                 // Draw the menu on the same line every time (skip title line).
                 Console.CursorTop = linesToSkipFromTop + 1;
@@ -47,8 +46,8 @@ namespace YonatanMankovich.SimpleConsoleMenus
         private bool WasEnterPressed()
         {
             bool correctKey;
-            // Loop until Up, Down, or Enter keys are pressed.
-            do
+
+            do // Loop until Up, Down, or Enter keys are pressed.
             {
                 correctKey = true;
                 Console.CursorLeft = 0;
@@ -83,9 +82,6 @@ namespace YonatanMankovich.SimpleConsoleMenus
             Console.ResetColor();
         }
 
-        public string GetSelectedItemName()
-        {
-            return menuItems[SelectedIndex].ToString();
-        }
+        public string GetSelectedItemName() => menuItems[SelectedIndex].ToString();
     }
 }

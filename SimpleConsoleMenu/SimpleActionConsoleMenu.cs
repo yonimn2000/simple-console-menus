@@ -46,5 +46,12 @@ namespace YonatanMankovich.SimpleConsoleMenus
             Show();
             DoAction();
         }
+
+        public void ShowHideAndDoAction()
+        {
+            Show();
+            Hide();
+            DoAction();
+        }
     }
 }

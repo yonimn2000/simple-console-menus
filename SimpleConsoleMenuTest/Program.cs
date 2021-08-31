@@ -8,10 +8,11 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
         static void Main(string[] args)
         {
             TestSimpleConsoleMenu1();
-            TestSimpleConsoleMenu2();
+            TestSimpleConsoleMenuHide();
             TestSimpleConsoleMenu3();
             TestSimpleConsoleMenuNoTitle();
             TestSimpleActionConsoleMenu();
+            TestSimpleActionConsoleMenuHide();
             Console.ReadLine();
         }
 
@@ -25,10 +26,11 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
             Console.WriteLine($"You selected index {menu.SelectedIndex} which is '{menu.GetSelectedItemName()}'");
         }
 
-        private static void TestSimpleConsoleMenu2()
+        private static void TestSimpleConsoleMenuHide()
         {
             SimpleConsoleMenu menu = new SimpleConsoleMenu("Choose an option:", "Option 1", "Option 2", "Option 3");
             menu.Show();
+            menu.Hide();
             Console.WriteLine($"You selected index {menu.SelectedIndex} which is '{menu.GetSelectedItemName()}'");
         }
 
@@ -47,6 +49,15 @@ namespace YonatanMankovich.SimpleConsoleMenus.Test
             menu.AddOption("Show another menu", TestSimpleConsoleMenu1);
             menu.AddOption("Exit", () => Environment.Exit(0));
             menu.ShowAndDoAction();
+        }
+
+        private static void TestSimpleActionConsoleMenuHide()
+        {
+            SimpleActionConsoleMenu menu = new SimpleActionConsoleMenu("Choose an option with an action:");
+            menu.AddOption("Write 'Hello!'", () => Console.WriteLine("Hello!"));
+            menu.AddOption("Show another menu", TestSimpleConsoleMenu1);
+            menu.AddOption("Exit", () => Environment.Exit(0));
+            menu.ShowHideAndDoAction();
         }
 
         private static void TestSimpleConsoleMenuNoTitle()

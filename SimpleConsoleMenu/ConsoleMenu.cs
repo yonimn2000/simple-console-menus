@@ -7,6 +7,8 @@ namespace YonatanMankovich.SimpleConsoleMenus
     {
         public string Title { get; set; }
         public int SelectedIndex { get; set; }
+
+        private const string menuItemPadding = "  ";
         internal IList<string> menuItems;
 
         public ConsoleMenu(string title)
@@ -33,7 +35,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
                 Console.CursorLeft = 0;
                 for (int i = 0; i < menuItems.Count; i++)
                 {
-                    string text = "  " + menuItems[i];
+                    string text = menuItemPadding + menuItems[i];
                     if (SelectedIndex == i)
                         WriteInNegativeColor(text);
                     else
@@ -41,6 +43,24 @@ namespace YonatanMankovich.SimpleConsoleMenus
                 }
             } while (!WasEnterPressed());
             Console.CursorVisible = true;
+        }
+
+        public void Hide()
+        {
+            int baseLine = Console.CursorTop - menuItems.Count - (string.IsNullOrWhiteSpace(Title) ? 0 : 1);
+            Console.CursorTop = baseLine;
+            Console.CursorLeft = 0;
+
+            // Remove title.
+            if (!string.IsNullOrWhiteSpace(Title))
+                Console.WriteLine(new string(' ', Title.Length));
+
+            // Remove menu items.
+            foreach (string menuItem in menuItems)
+                Console.WriteLine(new string(' ', menuItem.Length + menuItemPadding.Length));
+
+            Console.CursorTop = baseLine;
+            Console.CursorLeft = 0;
         }
 
         private bool WasEnterPressed()

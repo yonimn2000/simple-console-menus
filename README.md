@@ -61,4 +61,6 @@ menu.ShowAndDoAction();
 
 [Command Line Snake](https://github.com/yonimn2000/command-line-snake)
 
+[Command Line Minesweeper](https://github.com/yonimn2000/command-line-minesweeper)
+
 [System Specs Scraper](https://github.com/yonimn2000/system-specs-scraper)

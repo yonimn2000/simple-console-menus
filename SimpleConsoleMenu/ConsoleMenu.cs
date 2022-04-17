@@ -20,6 +20,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
 
         public void Show()
         {
+            bool prevCursorVisable = Console.CursorVisible;
             Console.CursorVisible = false;
             int linesToSkipFromTop = Console.CursorTop;
 
@@ -42,7 +43,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
                         Console.WriteLine(text);
                 }
             } while (!WasEnterPressed());
-            Console.CursorVisible = true;
+            Console.CursorVisible = prevCursorVisable;
         }
 
         public void Hide()

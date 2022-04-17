@@ -55,6 +55,10 @@ namespace YonatanMankovich.SimpleConsoleMenus
 
             do // Loop until user confirms selection.
             {
+                // Adjust buffer height.
+                if (Console.BufferHeight < linesToSkipFromTop + 2)
+                    Console.BufferHeight += linesToSkipFromTop + 2;
+
                 // Draw the menu on the same line every time (skip title line).
                 Console.CursorTop = linesToSkipFromTop + 1;
                 Console.CursorLeft = 0;

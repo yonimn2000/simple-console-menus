@@ -4,15 +4,19 @@ Use the up and down arrow keys to navigate and the ENTER key to select.
 
 ## Simple Console Menu Example
 
+### Using
+
+```cs
+using YonatanMankovich.SimpleConsoleMenus;
+```
+
 ### Adding Menu Options
 
 #### Manually
 
 ```cs
 SimpleConsoleMenu menu = new SimpleConsoleMenu("Choose an option:");
-menu.AddOption("Option 1");
-menu.AddOption("Option 2");
-menu.AddOption("Option 3");
+menu.AddOption("Option 1").AddOption("Option 2").AddOption("Option 3");
 ```
 
 #### Using `params`
@@ -45,10 +49,10 @@ Console.WriteLine($"You selected index {selectedIndex} which is '{selectedItemNa
 
 ```cs
 SimpleActionConsoleMenu menu = new SimpleActionConsoleMenu("Choose an option with an action:");
-menu.AddOption("Write 'Hello!'", () => Console.WriteLine("Hello!"));
-menu.AddOption("Show another menu", TestSimpleConsoleMenu);
-menu.AddOption("Exit", () => Environment.Exit(0));
-menu.ShowAndDoAction();
+menu.AddOption("Write 'Hello!'", () => Console.WriteLine("Hello!"))
+    .AddOption("Show another menu", TestSimpleConsoleMenu)
+    .AddOption("Exit", () => Environment.Exit(0))
+    .ShowAndDoAction();
 ```
 
 ![Action Menu](media/ActionExample.gif)

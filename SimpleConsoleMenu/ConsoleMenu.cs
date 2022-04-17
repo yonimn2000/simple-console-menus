@@ -3,21 +3,45 @@ using System.Collections.Generic;
 
 namespace YonatanMankovich.SimpleConsoleMenus
 {
+    /// <summary>
+    /// Defines methods for creating a <see cref="ConsoleMenu"/>.
+    /// </summary>
     public abstract class ConsoleMenu
     {
+        /// <summary>
+        /// Gets or sets the title of the menu.
+        /// </summary>
         public string Title { get; set; }
+
+        /// <summary>
+        /// Gets or sets the index of the selected menu item.
+        /// </summary>
         public int SelectedIndex { get; set; }
 
-        private const string menuItemPadding = "  ";
-        internal IList<string> menuItems;
+        /// <summary>
+        /// Gets or sets the menu item padding.
+        /// </summary>
+        public string MenuItemPadding { get; set; } = "  ";
 
+        /// <summary>
+        /// The list of the menu items.
+        /// </summary>
+        internal IList<string> MenuItems { get; }
+
+        /// <summary>
+        /// Initializes an instance of the <see cref="ConsoleMenu"/> class with a menu title.
+        /// </summary>
+        /// <param name="title">The title.</param>
         public ConsoleMenu(string title)
         {
             Title = title;
-            menuItems = new List<string>();
+            MenuItems = new List<string>();
             SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Shows the menu at the current <see cref="Console"/> line and waits for user selection.
+        /// </summary>
         public void Show()
         {
             bool prevCursorVisable = Console.CursorVisible;
@@ -34,9 +58,9 @@ namespace YonatanMankovich.SimpleConsoleMenus
                 // Draw the menu on the same line every time (skip title line).
                 Console.CursorTop = linesToSkipFromTop + 1;
                 Console.CursorLeft = 0;
-                for (int i = 0; i < menuItems.Count; i++)
+                for (int i = 0; i < MenuItems.Count; i++)
                 {
-                    string text = menuItemPadding + menuItems[i];
+                    string text = MenuItemPadding + MenuItems[i];
                     if (SelectedIndex == i)
                         WriteInNegativeColor(text);
                     else
@@ -46,9 +70,12 @@ namespace YonatanMankovich.SimpleConsoleMenus
             Console.CursorVisible = prevCursorVisable;
         }
 
+        /// <summary>
+        /// Hides the menu from the console.
+        /// </summary>
         public void Hide()
         {
-            int baseLine = Console.CursorTop - menuItems.Count - (string.IsNullOrWhiteSpace(Title) ? 0 : 1);
+            int baseLine = Console.CursorTop - MenuItems.Count - (string.IsNullOrWhiteSpace(Title) ? 0 : 1);
             Console.CursorTop = baseLine;
             Console.CursorLeft = 0;
 
@@ -57,13 +84,17 @@ namespace YonatanMankovich.SimpleConsoleMenus
                 Console.WriteLine(new string(' ', Title.Length));
 
             // Remove menu items.
-            foreach (string menuItem in menuItems)
-                Console.WriteLine(new string(' ', menuItem.Length + menuItemPadding.Length));
+            foreach (string menuItem in MenuItems)
+                Console.WriteLine(new string(' ', menuItem.Length + MenuItemPadding.Length));
 
             Console.CursorTop = baseLine;
             Console.CursorLeft = 0;
         }
 
+        /// <summary>
+        /// Updates the user selection and returns the value indicating whether the ENTER key was pressed.
+        /// </summary>
+        /// <returns>The value indicating whether the ENTER key was pressed.</returns>
         private bool WasEnterPressed()
         {
             bool correctKey;
@@ -72,12 +103,12 @@ namespace YonatanMankovich.SimpleConsoleMenus
             {
                 correctKey = true;
                 Console.CursorLeft = 0;
-                ConsoleKey key = Console.ReadKey().Key;
+                ConsoleKey key = Console.ReadKey(true).Key;
                 switch (key)
                 {
                     case ConsoleKey.Enter: return true;
                     case ConsoleKey.DownArrow:
-                        if (SelectedIndex < menuItems.Count - 1)
+                        if (SelectedIndex < MenuItems.Count - 1)
                             SelectedIndex++;
                         else
                             SelectedIndex = 0;
@@ -86,7 +117,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
                         if (SelectedIndex > 0)
                             SelectedIndex--;
                         else
-                            SelectedIndex = menuItems.Count - 1;
+                            SelectedIndex = MenuItems.Count - 1;
                         break;
                     default: correctKey = false; break;
                 }
@@ -94,7 +125,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
             return false;
         }
 
-        public void WriteInNegativeColor(string text)
+        private void WriteInNegativeColor(string text)
         {
             ConsoleColor tempColor = Console.BackgroundColor;
             Console.BackgroundColor = Console.ForegroundColor;
@@ -103,6 +134,10 @@ namespace YonatanMankovich.SimpleConsoleMenus
             Console.ResetColor();
         }
 
-        public string GetSelectedItemName() => menuItems[SelectedIndex].ToString();
+        /// <summary>
+        /// Gets the name of the selected menu item.
+        /// </summary>
+        /// <returns>The name of the selected menu item.</returns>
+        public string GetSelectedItemName() => MenuItems[SelectedIndex].ToString();
     }
 }

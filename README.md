@@ -2,6 +2,8 @@
 
 Use the up and down arrow keys to navigate and the ENTER key to select.
 
+The NuGet package is available [here](https://www.nuget.org/packages/YonatanMankovich.SimpleConsoleMenus/).
+
 ## Simple Console Menu Example
 
 ### Using

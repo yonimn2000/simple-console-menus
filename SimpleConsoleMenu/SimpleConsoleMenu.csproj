@@ -5,7 +5,7 @@
     <RootNamespace>YonatanMankovich.SimpleConsoleMenus</RootNamespace>
     <AssemblyName>YonatanMankovich.SimpleConsoleMenus</AssemblyName>
     <Copyright>© 2019 Yonatan Mankovich</Copyright>
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl>https://github.com/yonimn2000/simple-console-menus</RepositoryUrl>
     <RepositoryType></RepositoryType>
     <Product>YonatanMankovich.SimpleConsoleMenus</Product>
     <Company></Company>
@@ -15,6 +15,19 @@
     <FileVersion>1.1.2</FileVersion>
     <Version>1.1.2</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>YonatanMankovich.SimpleConsoleMenus</Title>
+    <Description>Simple console menus</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

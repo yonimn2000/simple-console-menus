@@ -1,8 +1,9 @@
 # Simple Console Menus
 
-Use the up and down arrow keys to navigate and the ENTER key to select.
+![NuGet Publish](https://github.com/yonimn2000/simple-console-menus/actions/workflows/nuget-publish.yml/badge.svg)
+[![NuGet](https://img.shields.io/nuget/v/YonatanMankovich.SimpleConsoleMenus.svg)](https://www.nuget.org/packages/YonatanMankovich.SimpleConsoleMenus)
 
-The NuGet package is available [here](https://www.nuget.org/packages/YonatanMankovich.SimpleConsoleMenus/).
+Use the up and down arrow keys to navigate and the ENTER key to select.
 
 ## Simple Console Menu Example
 

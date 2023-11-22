@@ -1,33 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>YonatanMankovich.SimpleConsoleMenus</RootNamespace>
-    <AssemblyName>YonatanMankovich.SimpleConsoleMenus</AssemblyName>
-    <Copyright>© 2019 Yonatan Mankovich</Copyright>
-    <RepositoryUrl>https://github.com/yonimn2000/simple-console-menus</RepositoryUrl>
-    <RepositoryType></RepositoryType>
-    <Product>YonatanMankovich.SimpleConsoleMenus</Product>
-    <Company></Company>
-    <Authors>Yonatan Mankovich</Authors>
-    <PackageId>YonatanMankovich.SimpleConsoleMenus</PackageId>
-    <AssemblyVersion>1.1.2</AssemblyVersion>
-    <FileVersion>1.1.2</FileVersion>
-    <Version>1.1.2</Version>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>YonatanMankovich.SimpleConsoleMenus</Title>
-    <Description>Simple console menus</Description>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>YonatanMankovich.SimpleConsoleMenus</RootNamespace>
+		<AssemblyName>YonatanMankovich.SimpleConsoleMenus</AssemblyName>
+		<Copyright>© 2019 Yonatan Mankovich</Copyright>
+		<RepositoryUrl>https://github.com/yonimn2000/simple-console-menus</RepositoryUrl>
+		<RepositoryType></RepositoryType>
+		<Product>YonatanMankovich.SimpleConsoleMenus</Product>
+		<Company></Company>
+		<Authors>Yonatan Mankovich</Authors>
+		<PackageId>YonatanMankovich.SimpleConsoleMenus</PackageId>
+		<AssemblyVersion>$(PackageVersion)</AssemblyVersion>
+		<FileVersion>$(PackageVersion)</FileVersion>
+		<Version>1.2</Version>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>YonatanMankovich.SimpleConsoleMenus</Title>
+		<Description>Simple console menus</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

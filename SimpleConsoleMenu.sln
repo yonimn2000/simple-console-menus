@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleConsoleMenu", "SimpleConsoleMenu\SimpleConsoleMenu.csproj", "{A019DFC2-6F55-4AE9-B87A-23864CE22E4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleMenuTest", "SimpleConsoleMenuTest\SimpleConsoleMenuTest.csproj", "{035A40E1-C1A5-42E7-9FF0-81B8FD6A3361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleConsoleMenuTest", "SimpleConsoleMenuTest\SimpleConsoleMenuTest.csproj", "{035A40E1-C1A5-42E7-9FF0-81B8FD6A3361}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

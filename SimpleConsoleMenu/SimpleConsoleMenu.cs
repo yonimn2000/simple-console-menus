@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace YonatanMankovich.SimpleConsoleMenus
+﻿namespace YonatanMankovich.SimpleConsoleMenus
 {
     /// <summary>
     /// Represents a <see cref="ConsoleMenu"/> with string items.
@@ -11,7 +9,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
         /// Initializes an instance of the <see cref="SimpleConsoleMenu"/> class with a menu title.
         /// </summary>
         /// <param name="title">The title.</param>
-        public SimpleConsoleMenu(string title) : base(title) { }
+        public SimpleConsoleMenu(string? title) : base(title) { }
 
         /// <summary>
         /// Initializes an instance of the <see cref="SimpleConsoleMenu"/> class with a menu title and given options.

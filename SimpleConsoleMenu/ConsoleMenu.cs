@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace YonatanMankovich.SimpleConsoleMenus
+﻿namespace YonatanMankovich.SimpleConsoleMenus
 {
     /// <summary>
     /// Defines methods for creating a <see cref="ConsoleMenu"/>.
@@ -11,7 +8,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
         /// <summary>
         /// Gets or sets the title of the menu.
         /// </summary>
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         /// <summary>
         /// Gets or sets the index of the selected menu item.
@@ -32,7 +29,7 @@ namespace YonatanMankovich.SimpleConsoleMenus
         /// Initializes an instance of the <see cref="ConsoleMenu"/> class with a menu title.
         /// </summary>
         /// <param name="title">The title.</param>
-        public ConsoleMenu(string title)
+        public ConsoleMenu(string? title)
         {
             Title = title;
             MenuItems = new List<string>();
@@ -129,11 +126,11 @@ namespace YonatanMankovich.SimpleConsoleMenus
             return false;
         }
 
-        private void WriteInNegativeColor(string text)
+        private static void WriteInNegativeColor(string text)
         {
-            ConsoleColor tempColor = Console.BackgroundColor;
-            Console.BackgroundColor = Console.ForegroundColor;
-            Console.ForegroundColor = tempColor;
+            (Console.ForegroundColor, Console.BackgroundColor)
+                = (Console.BackgroundColor, Console.ForegroundColor);
+
             Console.WriteLine(text);
             Console.ResetColor();
         }
